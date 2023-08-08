@@ -1,0 +1,15 @@
+version: 0.1
+component: build
+timeoutInSeconds: 1000
+shell: bash
+
+steps:
+  - type: Command
+    name: "git log"
+    command: |
+      git log
+  - type: Command
+    name: "size"
+    command: |
+      du -sh ./*
+      du -sh ../*
